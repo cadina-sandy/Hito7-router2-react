@@ -4,9 +4,11 @@ Proyecto realizado para el desafío **Hito 7 - Pizzería Mamma Mía**, continuan
 
 ## 🚀 Deploy
 
-Pendiente de publicación.
+[Ver sitio web en GitHub Pages](https://cadina-sandy.github.io/Hito7-router2-react/)
 
-El detalle de las pizzas necesita conectarse al backend del material de apoyo. Para publicar el sitio, se debe configurar una API accesible mediante `VITE_API_URL` y un alojamiento que permita usar las rutas de `BrowserRouter`.
+GitHub Actions compila el proyecto con Vite y publica el resultado en Pages al subir cambios a `main`. Las rutas publicadas comienzan con `/Hito7-router2-react/`.
+
+El inicio y el carrito funcionan en la web publicada. El detalle de las pizzas necesita conectarse al backend del material de apoyo. Para consultarlo desde internet, se debe configurar una API pública con HTTPS mediante `VITE_API_URL` al compilar. Mientras no se configure, el detalle muestra un error si el backend local no está disponible.
 
 ## 📝 Descripción
 
@@ -149,7 +151,7 @@ Antes de publicar, configurar el alojamiento para que las rutas de la aplicació
 ## 🔗 Repositorio
 
 [Ver repositorio en GitHub](https://github.com/cadina-sandy/Hito7-router2-react)
-[Dirección prevista del sitio en GitHub Pages](https://cadina-sandy.github.io/Hito7-router2-react/)
+[Ver sitio web en GitHub Pages](https://cadina-sandy.github.io/Hito7-router2-react/)
 
 
 ## 👩‍💻 Autora
