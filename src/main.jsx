@@ -10,6 +10,7 @@ import './styles.css'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter basename={import.meta.env.BASE_URL}>
+      {/* Comparto el carrito y la sesión con todas las páginas. */}
       <CartProvider>
         <UserProvider>
           <App />

@@ -12,6 +12,7 @@ function Navbar() {
       {/* Link cambia de página sin recargar el sitio. */}
       <nav aria-label="Navegación principal">
         <Link to="/">Inicio</Link>
+        {/* El token decide qué opciones de sesión mostrar. */}
         {token ? (
           <>
             <Link to="/profile">Perfil</Link>

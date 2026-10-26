@@ -20,10 +20,13 @@ function App() {
         {/* Cada dirección muestra su página. */}
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* Con sesión activa, ingreso y registro llevan al inicio. */}
           <Route path="/register" element={token ? <Navigate to="/" replace /> : <Register />} />
           <Route path="/login" element={token ? <Navigate to="/" replace /> : <Login />} />
           <Route path="/cart" element={<Cart />} />
+          {/* :id permite abrir el detalle de cualquier pizza. */}
           <Route path="/pizza/:id" element={<Pizza />} />
+          {/* Sin sesión, el perfil redirige al formulario de ingreso. */}
           <Route path="/profile" element={token ? <Profile /> : <Navigate to="/login" replace />} />
           <Route path="/404" element={<NotFound />} />
           {/* El asterisco recibe las rutas que no existen. */}

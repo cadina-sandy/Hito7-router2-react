@@ -49,7 +49,7 @@ function Cart() {
 
       <h2 aria-live="polite">Total: ${total.toLocaleString("es-CL")}</h2>
 
-      {/* Botón sin acción por ahora. */}
+      {/* Sin sesión, Pagar queda deshabilitado. El pago aún es simulado. */}
       <button type="button" className="dark-button" disabled={!token}>Pagar</button>
       <p className="payment-note">{token ? "El pago estará disponible próximamente." : "Debes iniciar sesión para pagar."}</p>
     </section>

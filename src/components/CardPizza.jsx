@@ -25,6 +25,7 @@ function CardPizza({ pizza }) {
 
         {/* Agrego la pizza al carrito compartido. */}
         <div className="card-buttons">
+          {/* Envío el id de esta pizza a la página de detalle. */}
           <Link className="detail-link" to={`/pizza/${pizza.id.toLowerCase()}`}>Ver más 👀</Link>
           <button type="button" className="dark-button" onClick={() => agregarPizza(pizza)}>Añadir 🛒</button>
         </div>

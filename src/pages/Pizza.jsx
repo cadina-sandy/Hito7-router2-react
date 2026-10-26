@@ -4,12 +4,14 @@ import { CartContext } from "../context/CartContext";
 
 function Pizza() {
   const { agregarPizza } = useContext(CartContext);
+  // Leo el id que viene en la dirección /pizza/:id.
   const { id } = useParams();
   const [pizza, setPizza] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
+    // Cancelo la consulta anterior al salir o cambiar de pizza.
     const controller = new AbortController();
     setLoading(true);
     setPizza(null);
@@ -18,6 +20,7 @@ function Pizza() {
     async function cargarPizza() {
       try {
         const apiUrl = (import.meta.env.VITE_API_URL || "http://localhost:5000").replace(/\/$/, "");
+        // Consulto el detalle de esta pizza en el backend.
         const response = await fetch(`${apiUrl}/api/pizzas/${encodeURIComponent(id.toLowerCase())}`, {
           signal: controller.signal,
         });
@@ -43,6 +46,7 @@ function Pizza() {
     return () => controller.abort();
   }, [id]);
 
+  // Muestro el estado de la consulta antes de dibujar el detalle.
   if (loading) return <p role="status">Cargando pizza...</p>;
   if (error) return <p role="alert">{error}</p>;
   if (!pizza) return <p>No se encontró la pizza.</p>;
