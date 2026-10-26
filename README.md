@@ -146,9 +146,11 @@ El código se publica en la rama `main`. Las carpetas `node_modules` y `dist` se
 
 Antes de publicar, configurar el alojamiento para que las rutas de la aplicación sirvan `index.html` y comprobar que el backend esté disponible desde el sitio publicado.
 
-## 🔗 Repositorio
+## 🔗 Repositorio. 
 
 [Ver repositorio en GitHub](https://github.com/cadina-sandy/Hito7-router2-react-)
+[Ver repositorio en linea]([https://](https://cadina-sandy.github.io/Hito7-router2-react-/)
+
 
 ## 👩‍💻 Autora
 
